@@ -19,5 +19,15 @@ str(gene)
 gene[1:6,1:3]
 
 
+#question 2
+
+#addition of col
+gene$Mean<-rowMeans(gene,na.rm = TRUE)
+# head of mean col
+head(gene$Mean)
+#head of whole gene data 
+head(gene)
+
+
 
 

@@ -12,6 +12,8 @@ url <- "https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinf
 gene <- read_tsv(url)
 #name of the columns
 names(gene) <- c(" gene accession numbers", "SRR5150592", "SRR5150593")
+# gene accession number as row name 
+gene <-read.table("gene_expression.tsv" , header = TRUE , row.names =  1)
 head(gene)
 str(gene)
 gene[1:6,1:3]

@@ -1,0 +1,5 @@
+# 8q boxplot for frist site Ne
+boxplot(ne$Circumf_2004_cm,ne$Circumf_2009_cm,ne$Circumf_2014_cm,ne$Circumf_2019_cm)
+
+# 8q boxplot for second site sw
+sprate boxplot(sw$Circumf_2004_cm,sw$Circumf_2009_cm,sw$Circumf_2014_cm,sw$Circumf_2019_cm)

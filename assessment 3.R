@@ -29,5 +29,27 @@ head(gene$Mean)
 head(gene)
 
 
+#question 3
+
+
+#arranged in descending order
+Arranging <- gene%>%arrange(desc(Mean))%>% head(10)
+rownames(Arranging) <- rownames(gene) %>% head(10)
+Arranging
+
+#question 4
+
+#mean less than 10
+Mean[Mean < 10]
+# number of gene with mean less than 10 .
+Result <- Mean[Mean < 10]
+NROW(Result)
+
+#Question 5
+
+#histogram
+range(gene$Mean)
+histogram <- hist (gene$Mean,main = "Histogram of Mean Values",xlab = "Mean", ylab = "GAN" ,breaks = 10)
+
 
 

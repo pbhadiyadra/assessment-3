@@ -1,9 +1,7 @@
+#Question 1
+
 #download the data
-url<-"growth_data.csv"
-x<-("growth_data.csv")
 url<-"https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinfo_asst3_part1_files/growth_data.csv"
-b<-read.table("growth_data.csv")
-View(b)
 treesgrowth<-read.table("growth_data.csv")
 View(treesgrowth)
 
@@ -11,8 +9,7 @@ View(treesgrowth)
 treesgrowth<-read.table("growth_data.csv",sep = ",",header = TRUE)
 head(treesgrowth)
 str(treesgrowth)
-
-treegrowth <- read.csv("growth_data.csv", header = TRUE, stringsAsFactors = FALSE)
-head(treesgrowth)
-str(treesgrowth)
+ 
+#column names
+colnames(treesgrowth)
 

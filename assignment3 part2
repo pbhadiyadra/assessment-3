@@ -31,7 +31,7 @@ as.list(geneofinterest)
 seqinr:: getLength(geneofinterest)
 
 #proportion of GC
-extractseqs (geneofinterest)
+seqinr::GC(geneofinterest$AAC73121)
 
 #question3
 

@@ -28,7 +28,7 @@ str(geneofinterest)
 as.list(geneofinterest)
 
 #determining the length
-seqinr:: getLength(E.COLI)
+seqinr:: getLength(geneofinterest)
 
 #proportion of GC
 extractseqs (geneofinterest)

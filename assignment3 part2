@@ -29,6 +29,8 @@ as.list(geneofinterest)
 
 #determining the length
 seqinr:: getLength(geneofinterest)
+#or
+getLength(geneofinterest)
 
 #proportion of GC
 seqinr::GC(geneofinterest$AAC73121)

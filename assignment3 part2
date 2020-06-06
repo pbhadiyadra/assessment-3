@@ -62,6 +62,7 @@ myseqs <- db[which(names(db) %in% Hits)]
 myseqs <-c(myseqs,E.COLI)
 seqinr:: write.fasta (E.COLI,names = names(myseqs), file.out="myseqs.fa")
 str(myseqs)
-
+tophit <- db[which(names(db) %in% Hits[1])] 
+tophit
 
 

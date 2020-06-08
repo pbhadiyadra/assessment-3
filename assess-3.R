@@ -4,8 +4,6 @@
 library(readr)
 library(dplyr)
 library(tidyr)
-#library(data.table)
-#library(tidyverse)
 library(tibble)
 
 url <- "https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinfo_asst3_part1_files/gene_expression.tsv"
@@ -41,9 +39,9 @@ Arranging
 #question 4
 
 #mean less than 10
-Mean[Mean < 10]
+gene$Mean[gene$Mean < 10]
 # number of gene with mean less than 10 .
-Result <- Mean[Mean < 10]
+Result <- gene$Mean[gene$Mean < 10]
 NROW(Result)
 
 #Question 5

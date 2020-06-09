@@ -3,23 +3,27 @@ url<-"growth_data.csv"
 x<-("growth_data.csv")
 url<-"https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinfo_asst3_part1_files/growth_data.csv"
 
-View(treesgrowth)
 
 # seprate the data and create a table
 treesgrowth<-read.table("growth_data.csv",sep = ",",header = TRUE)
 head(treesgrowth)
 str(treesgrowth)
+colnames(treesgrowth)
+
+
+ne<- subset(treesgrowth,Site =="northeast")
+str(ne)
+
+sw<-subset(treesgrowth,Site =="southwest")
+str(sw)
+
 
 # Q7 sperate the two sites before the next quetions.
 
 ne<- subset(treesgrowth,Site =="northeast")
-head(ne)
-tail(ne)
 str(ne)
 
 sw<-subset(treesgrowth,Site =="southwest")
-head(sw)
-tail(sw)
 str(sw)
 
 
@@ -37,8 +41,8 @@ mean(sw$Circumf_2019_cm)
 sd(sw$Circumf_2004_cm)
 sd(sw$Circumf_2019_cm)
 
-# 8q boxplot for first site Ne
-boxplot(ne$Circumf_2004_cm,ne$Circumf_2009_cm,ne$Circumf_2014_cm,ne$Circumf_2019_cm)
+# 8q boxplot for first site NE
+boxplot(ne$Circumf_2004_cm,ne$Circumf_2009_cm,ne$Circumf_2014_cm,ne$Circumf_2019_cm,xlab)
 
 # 8q boxplot for second site sw
 boxplot(sw$Circumf_2004_cm,sw$Circumf_2009_cm,sw$Circumf_2014_cm,sw$Circumf_2019_cm)
@@ -46,19 +50,18 @@ boxplot(sw$Circumf_2004_cm,sw$Circumf_2009_cm,sw$Circumf_2014_cm,sw$Circumf_2019
 
 #Q9 Calculate the mean growth over the past 10 years at each site.
 
-ne$Circumf_2019_cm-ne$Circumf_2009_cm
 ne$growth<-ne$Circumf_2019_cm-ne$Circumf_2009_cm
 mean(ne$growth)
-head(ne)
 str(ne)
 
-sw$Circumf_2019_cm-ne$Circumf_2009_cm
 sw$growth<-sw$Circumf_2019_cm-sw$Circumf_2009_cm
 mean(sw$growth)
-head(sw)
 str(sw)
 
 # 10 Calculate the t.test and wilcox.test over the past 10 years at each site.
 
-t.test(ne$growth,sw$growth)
-wilcox.test(ne$growth,sw$growth)
+t.test(ne$growth)
+t.test(sw$growth)
+wilcox.test(ne$growth)
+wilcox.test(sw$growth)
+

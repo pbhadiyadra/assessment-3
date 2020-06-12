@@ -4,21 +4,14 @@ x<-("growth_data.csv")
 url<-"https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinfo_asst3_part1_files/growth_data.csv"
 
 
-# seprate the data and create a table
+#  Q6 seprate the data and create a table
 treesgrowth<-read.table("growth_data.csv",sep = ",",header = TRUE)
 head(treesgrowth)
 str(treesgrowth)
 colnames(treesgrowth)
 
 
-ne<- subset(treesgrowth,Site =="northeast")
-str(ne)
-
-sw<-subset(treesgrowth,Site =="southwest")
-str(sw)
-
-
-# Q7 sperate the two sites before the next quetions.
+# sperate the two sites before the next quetions.
 
 ne<- subset(treesgrowth,Site =="northeast")
 str(ne)

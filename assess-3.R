@@ -14,9 +14,7 @@ str(gene)
 names(gene) <- c(" gene accession numbers", "SRR5150592", "SRR5150593")
 # gene accession number as row name
 gene <-read.table("gene_expression.tsv" , header = TRUE , row.names =  1)
-head(gene)
-str(gene)
-gene[1:6,1:2]
+tabular_format <- head(gene)
 
 #question 2
 
@@ -33,7 +31,7 @@ HEAD <-head(gene)
 
 #arranged in descending order
 Arranging <- gene%>%arrange(desc(Mean))%>% head(10)
-Arranging
+
 
 #question 4
 

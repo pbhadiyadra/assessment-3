@@ -33,7 +33,6 @@ HEAD <-head(gene)
 
 #arranged in descending order
 Arranging <- gene%>%arrange(desc(Mean))%>% head(10)
-rownames(Arranging) <- rownames(gene) %>% head(10)
 Arranging
 
 #question 4
